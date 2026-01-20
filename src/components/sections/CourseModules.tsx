@@ -132,7 +132,7 @@ export default function CourseModules() {
                         transition={{ duration: 0.3, ease: "easeInOut" }}
                         className="overflow-hidden"
                       >
-                        <div className="px-4 md:px-5 pb-4 md:pb-5 space-y-2">
+                        <div className="px-4 md:px-5 pt-2 pb-4 md:pb-5 space-y-2">
                           {module.lessons.map((lesson, lessonIndex) => (
                             <div
                               key={lessonIndex}
