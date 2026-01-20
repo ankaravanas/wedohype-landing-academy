@@ -78,6 +78,17 @@ html {
   100% { transform: translateX(100%); }
 }
 
+/* Infinite scroll animation for carousel */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Pause animation on hover */
+.hover\:pause-animation:hover {
+  animation-play-state: paused;
+}
+
 /* ============================================
    Background Patterns
    ============================================ */

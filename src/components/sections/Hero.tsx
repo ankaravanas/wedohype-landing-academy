@@ -17,6 +17,10 @@ const landingPageExamples = [
   { src: "/images/screencapture-grillacademy-kyso-gr-homepage-2024-10-09-13_59_24.webp", alt: "Grill Academy Landing Page" },
   { src: "/images/screencapture-katiatalksdiet-gr-2024-10-09-13_50_57.webp", alt: "Katia Talks Diet Landing Page" },
   { src: "/images/screencapture-sneakerness-gr-2024-10-11-17_02_15.webp", alt: "Sneakerness Landing Page" },
+  { src: "/images/screencapture-pharmasept-gr-el-heliodor-lp-2024-10-09-13_53_01.webp", alt: "Pharmasept Landing Page" },
+  { src: "/images/screencapture-learntowok-wokshop-gr-2024-10-11-18_37_51.webp", alt: "Learn to Wok Landing Page" },
+  { src: "/images/screencapture-joinus-trianemi-edu-gr-2024-10-09-13_56_52.webp", alt: "Trianemi Landing Page" },
+  { src: "/images/screencapture-producers-managi-eu-2024-10-09-13_55_27.webp", alt: "Producers Managi Landing Page" },
 ];
 
 export default function Hero() {
@@ -102,13 +106,35 @@ export default function Hero() {
           ))}
         </div>
 
-        {/* Landing Page Examples Showcase - Glassmorphism Cards */}
-        <div className="max-w-[1538px] mx-auto mb-12">
-          <div className="flex justify-center gap-5 overflow-x-auto pb-4 px-4">
+        {/* Landing Page Examples Showcase - Infinite Carousel */}
+        <div className="relative mb-12 overflow-hidden">
+          {/* Fade edges */}
+          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+
+          {/* Infinite scrolling container */}
+          <div className="flex gap-5 animate-[scroll_40s_linear_infinite] hover:pause-animation w-max">
+            {/* First set of cards */}
             {landingPageExamples.map((example, index) => (
               <div
-                key={index}
-                className="flex-shrink-0 w-[280px] md:w-[332px] h-[350px] md:h-[393px] rounded-[13px] overflow-hidden shadow-[0px_4px_91px_1px_rgba(135,135,135,0.1)] backdrop-blur-[26.5px] bg-[rgba(255,255,255,0.4)]"
+                key={`first-${index}`}
+                className="flex-shrink-0 w-[280px] md:w-[332px] h-[350px] md:h-[393px] rounded-[13px] overflow-hidden shadow-[0px_4px_91px_1px_rgba(135,135,135,0.1)] backdrop-blur-[26.5px] bg-[rgba(255,255,255,0.4)] transition-transform duration-300 hover:scale-[1.02]"
+              >
+                <div className="relative w-full h-full">
+                  <Image
+                    src={example.src}
+                    alt={example.alt}
+                    fill
+                    className="object-cover object-top"
+                  />
+                </div>
+              </div>
+            ))}
+            {/* Duplicate set for seamless loop */}
+            {landingPageExamples.map((example, index) => (
+              <div
+                key={`second-${index}`}
+                className="flex-shrink-0 w-[280px] md:w-[332px] h-[350px] md:h-[393px] rounded-[13px] overflow-hidden shadow-[0px_4px_91px_1px_rgba(135,135,135,0.1)] backdrop-blur-[26.5px] bg-[rgba(255,255,255,0.4)] transition-transform duration-300 hover:scale-[1.02]"
               >
                 <div className="relative w-full h-full">
                   <Image
