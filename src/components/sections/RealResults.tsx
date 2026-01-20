@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Zap, Brain, Settings, TrendingUp } from "lucide-react";
 
 const results = [
@@ -25,6 +26,27 @@ const results = [
   },
 ];
 
+const caseStudies = [
+  {
+    src: "/images/kidnest-lp.webp",
+    name: "Kidnest",
+    result: "+68% Conversion Rate",
+    industry: "E-commerce",
+  },
+  {
+    src: "/images/screencapture-fitbuddy-gr-experience-2024-10-09-16_49_12.webp",
+    name: "FitBuddy",
+    result: "+45% Lead Generation",
+    industry: "Fitness",
+  },
+  {
+    src: "/images/rania-nats.webp",
+    name: "Rania Nats",
+    result: "2.3x Sales Increase",
+    industry: "Nutrition",
+  },
+];
+
 export default function RealResults() {
   return (
     <section className="py-16 bg-white">
@@ -35,7 +57,7 @@ export default function RealResults() {
           </h2>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
           {results.map((result, index) => (
             <div
               key={index}
@@ -46,6 +68,46 @@ export default function RealResults() {
               </div>
               <h3 className="text-[16px] font-semibold text-[#15301f] mb-2">{result.title}</h3>
               <p className="text-[#15301f] text-[14px] leading-[20px]">{result.description}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Case Studies */}
+        <div className="text-center mb-8">
+          <p className="text-[#85c65f] text-[14px] font-medium uppercase tracking-wider mb-2">
+            Real Projects
+          </p>
+          <h3 className="text-[24px] md:text-[28px] font-semibold text-[#15301f]">
+            Δουλειές που έχουμε κάνει με αυτή τη μεθοδολογία
+          </h3>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          {caseStudies.map((study, index) => (
+            <div
+              key={index}
+              className="group bg-white rounded-[15px] overflow-hidden border border-[#d5e9c6] shadow-[0px_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0px_8px_40px_rgba(133,198,95,0.15)] transition-all duration-300"
+            >
+              {/* Image */}
+              <div className="relative h-[200px] overflow-hidden">
+                <Image
+                  src={study.src}
+                  alt={study.name}
+                  fill
+                  className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                />
+                {/* Gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#15301f]/60 to-transparent" />
+                {/* Result badge */}
+                <div className="absolute bottom-3 left-3 bg-[#85c65f] text-white px-3 py-1.5 rounded-full text-[13px] font-semibold">
+                  {study.result}
+                </div>
+              </div>
+              {/* Info */}
+              <div className="p-4">
+                <h4 className="text-[18px] font-semibold text-[#15301f] mb-1">{study.name}</h4>
+                <p className="text-[14px] text-gray-500">{study.industry}</p>
+              </div>
             </div>
           ))}
         </div>
