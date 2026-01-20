@@ -19,7 +19,7 @@ export default function Charity() {
               {/* Main image - on top */}
               <div className="absolute w-[320px] h-[340px] md:w-[400px] md:h-[420px] rounded-[33px] overflow-hidden left-3 top-0 z-10 bg-gray-100">
                 <Image
-                  src="/images/joyful-child-superhero.jpg"
+                  src="/images/joyful-child-superhero.webp"
                   alt="Παιδί ντυμένο σούπερ ήρωας"
                   fill
                   className="object-cover"
@@ -31,7 +31,7 @@ export default function Charity() {
               {/* Logo - positioned at bottom right */}
               <div className="absolute right-0 bottom-0 z-20">
                 <Image
-                  src="/images/superheroes-logo.png"
+                  src="/images/superheroes-logo.webp"
                   alt="Super Heroes GR Logo"
                   width={222}
                   height={101}

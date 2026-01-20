@@ -5,7 +5,7 @@ import { Check, X } from "lucide-react";
 
 const audiences = [
   {
-    image: "/images/businessman-main.jpg",
+    image: "/images/businessman-main.webp",
     title: "Είσαι Επιχειρηματίας;",
     points: [
       "Έχεις B2B ή B2C εταιρεία και θέλεις να αυξήσεις τις πωλήσεις σου;",
@@ -15,7 +15,7 @@ const audiences = [
     ],
   },
   {
-    image: "/images/young-guy-main.jpg",
+    image: "/images/young-guy-main.webp",
     title: "Είσαι Freelancer ή Agency;",
     points: [
       "Θες να χτίσεις ένα ανταγωνιστικό portfolio με landing pages που φέρνουν εντυπωσιακά αποτελέσματα;",

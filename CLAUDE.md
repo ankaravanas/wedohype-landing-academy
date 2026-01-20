@@ -181,23 +181,42 @@ import { motion } from "motion/react";
 
 1. **Greek Content:** All visible text is in Greek
 2. **Responsive:** Mobile-first design with md: breakpoints
-3. **Images:** Store in `/public/images/` and reference as `/images/filename.ext`
+3. **Images:** Store in `/public/images/` in **WebP format** and reference as `/images/filename.webp`
 4. **New Sections:** Add to `sections/index.ts` barrel file and import in `page.tsx`
 5. **No Dark Mode:** Design is light theme only
 6. **Tailwind v4:** Uses new CSS-first configuration (no tailwind.config.js)
 
 ## Deployment
 
+- **Platform:** Vercel (automatic deployment from GitHub)
 - **GitHub Repository:** `ankaravanas/wedohype-landing-academy`
-- **GitHub Pages URL:** `https://ankaravanas.github.io/wedohype-landing-academy/`
-- **Static Export:** Uses `output: "export"` with basePath for GitHub Pages
 
-### GitHub Pages Setup (Branch-based)
+## Image Optimization
 
-1. Build locally: `npm run build`
-2. The build output goes to `/out` folder
-3. Deploy using `gh-pages` branch or manually copy to GitHub Pages
-4. Repository Settings > Pages > Source: **Deploy from a branch** > `gh-pages` / `root`
+All images are optimized for performance:
+
+### WebP Format
+- All large images converted to WebP (~90% size reduction)
+- Use `cwebp -q 82 input.jpg -o output.webp` for conversion
+- Testimonial images stored in `/public/images/testimonials/`
+
+### Next.js Image Component
+```tsx
+<Image
+  src="/images/example.webp"
+  alt="Description"
+  fill
+  sizes="(max-width: 768px) 100vw, 50vw"  // Required for responsive
+  loading="lazy"  // For below-fold images
+  priority  // For above-fold images (first 4 in carousels)
+/>
+```
+
+### Performance Guidelines
+- Add `priority` to first 4 images in Hero carousel
+- Use `loading="lazy"` for all other images
+- Always include `sizes` attribute for `fill` images
+- Add `bg-gray-100` placeholder background while images load
 
 ## CSS Animations
 
