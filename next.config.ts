@@ -3,6 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   output: "export",
   basePath: "/wedohype-landing-academy",
+  assetPrefix: "/wedohype-landing-academy",
   images: {
     unoptimized: true,
     remotePatterns: [
