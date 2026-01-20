@@ -10,12 +10,14 @@ export default function CoursePreview() {
           {/* Left - Image/Preview Area */}
           <div className="order-2 lg:order-1">
             <div className="bg-[#eef6e8] rounded-[23px] p-5 border border-[#c5ddb3]">
-              <div className="relative aspect-[4/3] bg-white rounded-[15px] overflow-hidden border border-[#d5e9c6] shadow-[0px_4px_91px_1px_rgba(135,135,135,0.1)]">
+              <div className="relative aspect-[4/3] bg-gray-100 rounded-[15px] overflow-hidden border border-[#d5e9c6] shadow-[0px_4px_91px_1px_rgba(135,135,135,0.1)]">
                 <Image
                   src="/images/homepage-example.png"
                   alt="Landing Page Example"
                   fill
                   className="object-cover object-top"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  loading="lazy"
                 />
               </div>
             </div>

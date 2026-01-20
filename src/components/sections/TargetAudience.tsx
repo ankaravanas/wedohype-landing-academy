@@ -58,13 +58,15 @@ export default function TargetAudience() {
               className="bg-[#eef6e8] rounded-[23px] overflow-hidden border border-[#c5ddb3]"
             >
               {/* Image with gradient overlay */}
-              <div className="relative h-[280px] md:h-[309px] w-full overflow-hidden">
+              <div className="relative h-[280px] md:h-[309px] w-full overflow-hidden bg-gray-100">
                 <div className="absolute inset-0 bg-gradient-to-b from-[#f6f6f6] to-[#85c65f] rounded-t-[23px]" />
                 <Image
                   src={audience.image}
                   alt={audience.title}
                   fill
                   className="object-cover object-top relative z-10"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  loading="lazy"
                 />
               </div>
               {/* Content */}

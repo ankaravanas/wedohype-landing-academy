@@ -151,15 +151,15 @@ export default function CourseModules() {
                               {module.hasPlatformBadges && lessonIndex === module.lessons.length - 1 && (
                                 <div className="flex items-center gap-2 ml-2">
                                   <div className="bg-white border border-gray-200 rounded-[6px] px-2 py-1 flex items-center justify-center">
-                                    <Image src="/images/lovable-dark.png" alt="Lovable" width={50} height={16} className="object-contain" />
+                                    <Image src="/images/lovable-dark.png" alt="Lovable" width={50} height={16} className="object-contain" loading="lazy" />
                                   </div>
                                   <span className="text-[#15301f]/40 text-[11px]">vs</span>
                                   <div className="bg-white border border-gray-200 rounded-[6px] px-2 py-1 flex items-center justify-center">
-                                    <Image src="/images/wordpress-logo.png" alt="WordPress" width={55} height={16} className="object-contain" />
+                                    <Image src="/images/wordpress-logo.png" alt="WordPress" width={55} height={16} className="object-contain" loading="lazy" />
                                   </div>
                                   <span className="text-[#15301f]/40 text-[11px]">vs</span>
                                   <div className="bg-white border border-gray-200 rounded-[6px] px-2 py-1 flex items-center justify-center">
-                                    <Image src="/images/clickfunnels-logo.png" alt="ClickFunnels" width={55} height={16} className="object-contain" />
+                                    <Image src="/images/clickfunnels-logo.png" alt="ClickFunnels" width={55} height={16} className="object-contain" loading="lazy" />
                                   </div>
                                 </div>
                               )}

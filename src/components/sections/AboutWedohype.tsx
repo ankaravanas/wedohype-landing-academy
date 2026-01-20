@@ -118,6 +118,8 @@ export default function AboutWedohype() {
                     alt={member.name}
                     fill
                     className="object-contain object-bottom"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    loading="lazy"
                   />
                 </div>
               </div>

@@ -121,12 +121,15 @@ export default function Hero() {
                 key={`first-${index}`}
                 className="flex-shrink-0 w-[280px] md:w-[332px] h-[350px] md:h-[393px] rounded-[13px] overflow-hidden shadow-[0px_4px_91px_1px_rgba(135,135,135,0.1)] backdrop-blur-[26.5px] bg-[rgba(255,255,255,0.4)] transition-transform duration-300 hover:scale-[1.02]"
               >
-                <div className="relative w-full h-full">
+                <div className="relative w-full h-full bg-gray-100">
                   <Image
                     src={example.src}
                     alt={example.alt}
                     fill
                     className="object-cover object-top"
+                    sizes="(max-width: 768px) 280px, 332px"
+                    priority={index < 4}
+                    loading={index < 4 ? "eager" : "lazy"}
                   />
                 </div>
               </div>
@@ -137,12 +140,14 @@ export default function Hero() {
                 key={`second-${index}`}
                 className="flex-shrink-0 w-[280px] md:w-[332px] h-[350px] md:h-[393px] rounded-[13px] overflow-hidden shadow-[0px_4px_91px_1px_rgba(135,135,135,0.1)] backdrop-blur-[26.5px] bg-[rgba(255,255,255,0.4)] transition-transform duration-300 hover:scale-[1.02]"
               >
-                <div className="relative w-full h-full">
+                <div className="relative w-full h-full bg-gray-100">
                   <Image
                     src={example.src}
                     alt={example.alt}
                     fill
                     className="object-cover object-top"
+                    sizes="(max-width: 768px) 280px, 332px"
+                    loading="lazy"
                   />
                 </div>
               </div>

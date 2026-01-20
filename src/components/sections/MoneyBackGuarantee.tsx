@@ -13,7 +13,7 @@ export default function MoneyBackGuarantee() {
               {/* Green circle background */}
               <div className="w-[250px] h-[250px] md:w-[300px] md:h-[300px] bg-gradient-to-br from-[#eef6e8] to-[#85c65f] rounded-full flex items-center justify-center">
                 <div className="w-[180px] h-[180px] md:w-[220px] md:h-[220px] bg-white rounded-full shadow-lg flex items-center justify-center">
-                  <Image src="/images/shield.svg" alt="Money Back Guarantee" width={80} height={80} className="md:w-[100px] md:h-[100px]" />
+                  <Image src="/images/shield.svg" alt="Money Back Guarantee" width={80} height={80} className="md:w-[100px] md:h-[100px]" loading="lazy" />
                 </div>
               </div>
               {/* Decorative circles */}

@@ -17,12 +17,14 @@ export default function Charity() {
               />
 
               {/* Main image - on top */}
-              <div className="absolute w-[320px] h-[340px] md:w-[400px] md:h-[420px] rounded-[33px] overflow-hidden left-3 top-0 z-10">
+              <div className="absolute w-[320px] h-[340px] md:w-[400px] md:h-[420px] rounded-[33px] overflow-hidden left-3 top-0 z-10 bg-gray-100">
                 <Image
                   src="/images/joyful-child-superhero.jpg"
                   alt="Παιδί ντυμένο σούπερ ήρωας"
                   fill
                   className="object-cover"
+                  sizes="(max-width: 768px) 320px, 400px"
+                  loading="lazy"
                 />
               </div>
 
@@ -34,6 +36,7 @@ export default function Charity() {
                   width={222}
                   height={101}
                   className="object-contain"
+                  loading="lazy"
                 />
               </div>
             </div>

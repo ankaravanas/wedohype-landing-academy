@@ -81,7 +81,7 @@ export default function BonusPack() {
               className="bg-white rounded-[15px] p-6 border border-[#d5e9c6] hover:shadow-[0px_4px_91px_1px_rgba(135,135,135,0.1)] transition-all"
             >
               <div className="w-12 h-12 bg-[#eef6e8] rounded-[10px] flex items-center justify-center mb-4">
-                <Image src={bonus.icon} alt="" width={bonus.iconSize} height={bonus.iconSize} />
+                <Image src={bonus.icon} alt="" width={bonus.iconSize} height={bonus.iconSize} loading="lazy" />
               </div>
               <span className="text-[12px] font-bold text-[#85c65f] uppercase tracking-wider">
                 {bonus.title}

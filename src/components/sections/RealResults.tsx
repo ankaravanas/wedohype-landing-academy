@@ -107,13 +107,15 @@ export default function RealResults() {
               className="group bg-white rounded-[15px] overflow-hidden border border-[#d5e9c6] shadow-[0px_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0px_8px_40px_rgba(133,198,95,0.15)] transition-all duration-300"
             >
               {/* Image with smooth scroll-on-hover effect */}
-              <div className="relative h-[320px] overflow-hidden">
+              <div className="relative h-[320px] overflow-hidden bg-gray-100">
                 <div className="absolute inset-0 w-full h-[200%] transition-transform duration-[4s] ease-[cubic-bezier(0.25,0.1,0.25,1)] group-hover:-translate-y-[50%]">
                   <Image
                     src={study.src}
                     alt={study.industry}
                     fill
                     className="object-cover object-top"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    loading="lazy"
                   />
                 </div>
                 {/* Gradient overlay - bottom */}
