@@ -15,7 +15,7 @@
 
 # next.js
 /.next/
-/out/
+# /out/ - needed for GitHub Pages
 
 # production
 /build
