@@ -21,6 +21,7 @@ const landingPageExamples = [
   { src: "/images/screencapture-learntowok-wokshop-gr-2024-10-11-18_37_51.webp", alt: "Learn to Wok Landing Page" },
   { src: "/images/screencapture-joinus-trianemi-edu-gr-2024-10-09-13_56_52.webp", alt: "Trianemi Landing Page" },
   { src: "/images/screencapture-producers-managi-eu-2024-10-09-13_55_27.webp", alt: "Producers Managi Landing Page" },
+  { src: "/images/screencapture-18-24-gr-el-pages-2023-bansko-2024-10-09-13_55_02.webp", alt: "18|24 Travel Landing Page" },
 ];
 
 export default function Hero() {
