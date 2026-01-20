@@ -31,7 +31,7 @@ const caseStudies = [
     src: "/images/kidnest-lp.webp",
     name: "Kidnest",
     result: "+68% Conversion Rate",
-    industry: "E-commerce",
+    industry: "Parenting & Education",
   },
   {
     src: "/images/screencapture-fitbuddy-gr-experience-2024-10-09-16_49_12.webp",
@@ -88,16 +88,18 @@ export default function RealResults() {
               key={index}
               className="group bg-white rounded-[15px] overflow-hidden border border-[#d5e9c6] shadow-[0px_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0px_8px_40px_rgba(133,198,95,0.15)] transition-all duration-300"
             >
-              {/* Image */}
-              <div className="relative h-[200px] overflow-hidden">
+              {/* Image with scroll-on-hover effect */}
+              <div className="relative h-[320px] overflow-hidden">
                 <Image
                   src={study.src}
                   alt={study.name}
                   fill
-                  className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  className="object-cover object-top transition-all duration-[3s] ease-in-out group-hover:object-bottom"
                 />
-                {/* Gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#15301f]/60 to-transparent" />
+                {/* Gradient overlay - bottom */}
+                <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#15301f]/80 to-transparent" />
+                {/* Gradient overlay - top (subtle) */}
+                <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-[#15301f]/30 to-transparent" />
                 {/* Result badge */}
                 <div className="absolute bottom-3 left-3 bg-[#85c65f] text-white px-3 py-1.5 rounded-full text-[13px] font-semibold">
                   {study.result}
