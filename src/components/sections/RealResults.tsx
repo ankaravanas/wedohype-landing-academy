@@ -29,31 +29,37 @@ const results = [
 const caseStudies = [
   {
     src: "/images/kidnest-lp.webp",
+    name: "Kidnest",
     result: "+68% Conversion Rate",
     industry: "Parenting & Education",
   },
   {
     src: "/images/screencapture-fitbuddy-gr-experience-2024-10-09-16_49_12.webp",
+    name: "FitBuddy",
     result: "+45% Lead Generation",
     industry: "Fitness App",
   },
   {
     src: "/images/screencapture-katiatalksdiet-gr-2024-10-09-13_50_57.webp",
+    name: "Katia Talks Diet",
     result: "2.3x Sales Increase",
-    industry: "Nutrition Coaching",
+    industry: "Nutritionist",
   },
   {
     src: "/images/screencapture-grillacademy-kyso-gr-homepage-2024-10-09-13_59_24.webp",
+    name: "Grill Academy",
     result: "+52% Registrations",
-    industry: "Culinary Academy",
+    industry: "BBQ Masterclasses",
   },
   {
     src: "/images/screencapture-sneakerness-gr-2024-10-11-17_02_15.webp",
+    name: "Sneakerness",
     result: "3x Event Sign-ups",
-    industry: "Event & Fashion",
+    industry: "Fashion Event",
   },
   {
     src: "/images/screencapture-pharmasept-gr-el-heliodor-lp-2024-10-09-13_53_01.webp",
+    name: "Pharmasept",
     result: "+89% Product Sales",
     industry: "Skincare & Cosmetics",
   },
@@ -121,7 +127,8 @@ export default function RealResults() {
               </div>
               {/* Info */}
               <div className="p-4">
-                <p className="text-[16px] font-semibold text-[#15301f]">{study.industry}</p>
+                <h4 className="text-[16px] font-semibold text-[#15301f]">{study.name}</h4>
+                <p className="text-[14px] text-gray-500">{study.industry}</p>
               </div>
             </div>
           ))}
