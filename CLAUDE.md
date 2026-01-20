@@ -30,7 +30,7 @@ src/
 │   ├── layout.tsx        # Root layout with fonts
 │   └── globals.css       # Global styles & CSS variables
 ├── components/
-│   ├── sections/         # Page sections (18 total)
+│   ├── sections/         # Page sections (19 total)
 │   │   ├── index.ts      # Barrel exports
 │   │   ├── Hero.tsx
 │   │   ├── UniqueSystem.tsx
@@ -49,9 +49,11 @@ src/
 │   │   ├── Charity.tsx
 │   │   ├── Testimonials.tsx
 │   │   ├── FAQ.tsx
-│   │   └── FinalCTA.tsx
+│   │   ├── FinalCTA.tsx
+│   │   └── Footer.tsx
 │   └── ui/               # Reusable UI components
 │       ├── button.tsx
+│       ├── shiny-button.tsx
 │       └── testimonials-columns.tsx
 ├── lib/
 │   └── utils.ts          # cn() utility for classnames
@@ -183,3 +185,39 @@ import { motion } from "motion/react";
 4. **New Sections:** Add to `sections/index.ts` barrel file and import in `page.tsx`
 5. **No Dark Mode:** Design is light theme only
 6. **Tailwind v4:** Uses new CSS-first configuration (no tailwind.config.js)
+
+## Deployment
+
+- **GitHub Repository:** `ankaravanas/wedohype-landing-academy`
+- **GitHub Pages URL:** `https://ankaravanas.github.io/wedohype-landing-academy/`
+- **Deployment:** Automatic via GitHub Actions (`.github/workflows/deploy.yml`)
+- **Static Export:** Uses `output: "export"` with basePath for GitHub Pages
+
+### GitHub Pages Setup
+
+The project uses GitHub Actions for deployment. Make sure:
+1. Repository Settings > Pages > Source is set to **GitHub Actions**
+2. The workflow runs automatically on push to `main` branch
+
+## CSS Animations
+
+Custom animations defined in `globals.css`:
+
+```css
+/* Infinite scroll for carousels */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Usage: animate-[scroll_40s_linear_infinite] */
+/* Pause on hover: hover:pause-animation */
+```
+
+## Case Studies
+
+The RealResults section displays case study cards with:
+- Scroll-on-hover effect (4s duration, cubic-bezier easing)
+- Industry labels in Greek (primary emphasis)
+- Client names (secondary, smaller text)
+- Result badges (conversion improvements)
