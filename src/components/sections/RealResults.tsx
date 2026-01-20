@@ -40,8 +40,8 @@ const caseStudies = [
     industry: "Fitness",
   },
   {
-    src: "/images/rania-nats.webp",
-    name: "Rania Nats",
+    src: "/images/screencapture-katiatalksdiet-gr-2024-10-09-13_50_57.webp",
+    name: "Katia Talks Diet",
     result: "2.3x Sales Increase",
     industry: "Nutrition",
   },
