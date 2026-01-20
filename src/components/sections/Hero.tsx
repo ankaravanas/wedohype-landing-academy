@@ -81,7 +81,7 @@ export default function Hero() {
             Θέλω να μάθω περισσότερα
           </button>
           <p className="text-[18px] text-[#15301f] leading-[26px]">
-            + <span className="font-bold">ΔΩΡΟ</span> Bonus Pack αξίας xxx€
+            + <span className="font-bold">ΔΩΡΟ</span> Bonus Pack αξίας 2.770€+
           </p>
         </div>
 
@@ -162,9 +162,9 @@ export default function Hero() {
                   Templates, case studies, θεωρία+πρακτικά παραδείγματα
                 </p>
                 <div className="flex items-center justify-center gap-2">
-                  <span className="text-[28px] font-bold text-[#15301f]">ΧΧ€</span>
+                  <span className="text-[28px] font-bold text-[#15301f]">197€</span>
                   <span className="text-[14px] text-[#85c65f] font-medium">
-                    +Bonus Pack αξίας xxx€ δωρεάν!
+                    +Bonus Pack αξίας 2.770€+ δωρεάν!
                   </span>
                 </div>
               </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { Shield, Gift, Clock } from "lucide-react";
+import { ShinyButton } from "@/components/ui/shiny-button";
 
 const features = [
   {
@@ -13,7 +14,7 @@ const features = [
   },
   {
     icon: Gift,
-    text: "Bonus Pack (ΔΩΡΕΑΝ - αξία XXX€)",
+    text: "Bonus Pack (ΔΩΡΕΑΝ - αξία 2.770€+)",
   },
 ];
 
@@ -40,7 +41,7 @@ const bonusIncludes = [
 
 export default function PricingCTA() {
   return (
-    <section className="py-16 bg-gradient-to-b from-white to-[#eef6e8] bg-pattern bg-grid-light mask-fade-edges">
+    <section id="pricing" className="py-16 bg-gradient-to-b from-white to-[#eef6e8] bg-pattern bg-grid-light mask-fade-edges">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <h2 className="text-[28px] md:text-[37px] font-semibold text-[#15301f] mb-4 leading-[1.2]">
@@ -66,9 +67,9 @@ export default function PricingCTA() {
             <div className="p-5">
               {/* Price */}
               <div className="text-center mb-5 pb-5 border-b border-[#d5e9c6]">
-                <p className="text-gray-400 line-through text-[16px]">Αρχική τιμή: XXΧ€</p>
+                <p className="text-gray-400 line-through text-[16px]">Αρχική τιμή: 397€</p>
                 <p className="text-[28px] font-bold text-[#15301f] my-2">
-                  Τιμή προσφοράς: <span className="text-[36px]">XΧ€</span>
+                  Τιμή προσφοράς: <span className="text-[36px]">197€</span>
                 </p>
               </div>
 
@@ -85,9 +86,9 @@ export default function PricingCTA() {
               </div>
 
               {/* CTA */}
-              <button className="w-full bg-[#85c65f] hover:bg-[#6db04a] text-white font-bold py-4 px-6 rounded-[15px] text-[16px] transition-all duration-200 shadow-[0px_4px_91px_1px_rgba(135,135,135,0.1)]">
-                Θέλω το Course!
-              </button>
+              <div className="flex justify-center">
+                <ShinyButton className="w-full">Θέλω το Course!</ShinyButton>
+              </div>
             </div>
           </div>
 

@@ -1,11 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
 
 export default function Charity() {
   return (
-    <section className="py-16 bg-[#f6f6f6]">
+    <section className="py-16 bg-white">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-10 items-center">
           {/* Image Section - Figma exact design */}
@@ -52,11 +51,6 @@ export default function Charity() {
               Η ομάδα της WEDOHYPE στηρίζει τις δράσεις τους, προσφέροντας μέρος των εσόδων του course.
             </p>
 
-            {/* CTA Button */}
-            <button className="mt-6 bg-[#15301f] hover:bg-[#1f4a2e] text-white font-bold py-3 px-6 rounded-[15px] text-[18px] inline-flex items-center gap-2 transition-all duration-200">
-              Απόκτησέ το
-              <ArrowRight className="w-5 h-5" />
-            </button>
           </div>
         </div>
       </div>

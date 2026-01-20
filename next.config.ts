@@ -1,9 +1,11 @@
 import type { NextConfig } from "next";
 
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: "/wedohype-landing-academy",
-  assetPrefix: "/wedohype-landing-academy",
+  basePath: isProd ? "/wedohype-landing-academy" : "",
+  assetPrefix: isProd ? "/wedohype-landing-academy" : "",
   images: {
     unoptimized: true,
     remotePatterns: [

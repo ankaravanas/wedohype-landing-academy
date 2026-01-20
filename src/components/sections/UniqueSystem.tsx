@@ -31,7 +31,13 @@ export default function UniqueSystem() {
         <div className="text-center max-w-[900px] mx-auto mb-10">
           <h2 className="text-[28px] md:text-[37px] font-semibold text-[#15301f] leading-[1.2] mb-4">
             Το μοναδικό σύστημα στην Ελλάδα που σου δείχνει πώς να χτίζεις{" "}
-            <span className="text-[#85c65f]">Πωλησιακές Landing Pages</span>,
+            <span className="relative inline-block text-[#85c65f]">
+              <span className="relative z-10">Πωλησιακές Landing Pages</span>
+              <span
+                className="absolute left-0 right-0 bottom-0 h-[50%] bg-[#85c65f]/40 -z-0 rounded-sm"
+                aria-hidden="true"
+              />
+            </span>,
             ακόμα κι αν δεν έχεις ιδέα από copy, design και development!
           </h2>
           <p className="text-[16px] text-[#15301f] leading-[26px]">
@@ -39,16 +45,16 @@ export default function UniqueSystem() {
           </p>
         </div>
 
-        {/* For whom */}
-        <div className="mb-12">
-          <p className="text-center text-[#15301f] mb-8 text-[16px] leading-[26px]">
+        {/* For whom - Integrated container */}
+        <div className="mb-12 bg-[#f6f6f6] rounded-[23px] p-6 lg:p-8">
+          <p className="text-center text-[#15301f] mb-6 text-[18px] md:text-[20px] leading-[28px] font-medium">
             Στη WEDOHYPE, δημιουργήσαμε αυτό το σύστημα για τον σύγχρονο επαγγελματία που:
           </p>
           <div className="grid md:grid-cols-3 gap-4">
             {personas.map((persona, index) => (
               <div
                 key={index}
-                className="bg-[#eef6e8] rounded-[15px] p-5 border border-[#c5ddb3] hover:shadow-[0px_4px_91px_1px_rgba(135,135,135,0.1)] transition-shadow"
+                className="bg-white rounded-[15px] p-5 border border-[#d5e9c6] hover:shadow-[0px_4px_91px_1px_rgba(135,135,135,0.1)] transition-shadow"
               >
                 <div className="w-11 h-11 bg-[#15301f] rounded-[10px] flex items-center justify-center mb-4">
                   <persona.icon className="w-5 h-5 text-white" />

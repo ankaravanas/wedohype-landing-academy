@@ -1,8 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Play, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
+import { ShinyButton } from "@/components/ui/shiny-button";
 
 const modules = [
   {
@@ -84,7 +86,7 @@ export default function CourseModules() {
         {/* Section Title */}
         <div className="text-center mb-10">
           <h2 className="text-[28px] md:text-[37px] font-semibold text-[#15301f] mb-2">
-            Τι περιλαμβάνει το Course (Βήμα-Βήμα)
+            Τι περιλαμβάνει το Course
           </h2>
         </div>
 
@@ -145,20 +147,19 @@ export default function CourseModules() {
                                 {lesson}
                               </span>
 
-                              {/* Platform badges for Module 1 Lesson 5 */}
+                              {/* Platform logos for Module 1 Lesson 5 */}
                               {module.hasPlatformBadges && lessonIndex === module.lessons.length - 1 && (
-                                <div className="flex items-center gap-2 ml-auto">
-                                  <span className="text-[#15301f] text-[13px]">vs</span>
-                                  <div className="flex items-center gap-2">
-                                    <span className="bg-white border border-gray-200 rounded px-2 py-1 text-[10px] font-medium text-gray-600">
-                                      Lovable
-                                    </span>
-                                    <span className="bg-white border border-gray-200 rounded px-2 py-1 text-[10px] font-medium text-gray-600">
-                                      WordPress
-                                    </span>
-                                    <span className="bg-white border border-gray-200 rounded px-2 py-1 text-[10px] font-medium text-gray-600">
-                                      ClickFunnels
-                                    </span>
+                                <div className="flex items-center gap-2 ml-2">
+                                  <div className="bg-white border border-gray-200 rounded-[6px] px-2 py-1 flex items-center justify-center">
+                                    <Image src="/images/lovable-dark.png" alt="Lovable" width={50} height={16} className="object-contain" />
+                                  </div>
+                                  <span className="text-[#15301f]/40 text-[11px]">vs</span>
+                                  <div className="bg-white border border-gray-200 rounded-[6px] px-2 py-1 flex items-center justify-center">
+                                    <Image src="/images/wordpress-logo.png" alt="WordPress" width={55} height={16} className="object-contain" />
+                                  </div>
+                                  <span className="text-[#15301f]/40 text-[11px]">vs</span>
+                                  <div className="bg-white border border-gray-200 rounded-[6px] px-2 py-1 flex items-center justify-center">
+                                    <Image src="/images/clickfunnels-logo.png" alt="ClickFunnels" width={55} height={16} className="object-contain" />
                                   </div>
                                 </div>
                               )}
@@ -166,9 +167,9 @@ export default function CourseModules() {
                               {/* Lovable badge for Module 4 */}
                               {module.hasLovableBadge && lessonIndex === 0 && (
                                 <div className="ml-auto">
-                                  <span className="bg-white border border-gray-200 rounded px-2 py-1 text-[10px] font-medium text-gray-600">
-                                    Lovable
-                                  </span>
+                                  <div className="bg-white border border-gray-200 rounded-[8px] px-3 py-1.5 flex items-center justify-center">
+                                    <Image src="/images/lovable-dark.png" alt="Lovable" width={60} height={20} className="object-contain" />
+                                  </div>
                                 </div>
                               )}
                             </div>
@@ -180,6 +181,11 @@ export default function CourseModules() {
                 </div>
               );
             })}
+          </div>
+
+          {/* CTA Button */}
+          <div className="text-center mt-8">
+            <ShinyButton href="#pricing">Απόκτησέ το</ShinyButton>
           </div>
         </div>
       </div>

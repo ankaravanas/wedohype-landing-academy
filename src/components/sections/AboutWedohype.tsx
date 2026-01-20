@@ -12,7 +12,7 @@ const industries = [
   {
     icon: "/images/office-icon.svg",
     title: "B2B και B2C εταιρείες",
-    description: "",
+    description: "υπηρεσίες, consulting, SaaS, agencies",
   },
   {
     icon: "/images/stethoscope-icon.svg",
@@ -25,9 +25,9 @@ const industries = [
     description: "και κατασκευαστικές εταιρείες",
   },
   {
-    icon: "/images/searching-icon.svg",
-    title: "Beauty professionals",
-    description: "",
+    icon: "/images/stethoscope-icon.svg",
+    title: "Επαγγελματίες Υγείας",
+    description: "φυσιοθεραπευτές, διατροφολόγοι, ψυχολόγοι",
   },
 ];
 
@@ -193,8 +193,15 @@ export default function AboutWedohype() {
         {/* CTA text */}
         <div className="text-center max-w-[900px] mx-auto">
           <p className="text-[#15301f] text-[16px] leading-[26px] mb-4">
-            Αυτό το course είναι η μέθοδός μας, αποδομημένη και πακεταρισμένη για σένα.
-            Χωρίς γενικές και περίπλοκες θεωρίες. Μόνο πράγματα που εφαρμόζουμε κάθε μέρα
+            Αυτό το course είναι{" "}
+            <span className="relative inline font-bold">
+              <span className="relative z-10">η μέθοδός μας, αποδομημένη και πακεταρισμένη για σένα</span>
+              <span
+                className="absolute left-0 right-0 bottom-0 h-[50%] bg-[#85c65f]/40 -z-0 rounded-sm"
+                aria-hidden="true"
+              />
+            </span>
+            . Χωρίς γενικές και περίπλοκες θεωρίες. Μόνο πράγματα που εφαρμόζουμε κάθε μέρα
             για εταιρείες στην Ελλάδα και στο εξωτερικό.
           </p>
           <p className="text-[#15301f] font-semibold text-[18px]">

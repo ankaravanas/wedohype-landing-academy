@@ -17,6 +17,7 @@ import {
   Testimonials,
   FAQ,
   FinalCTA,
+  Footer,
 } from "@/components/sections";
 
 export default function Home() {
@@ -40,6 +41,7 @@ export default function Home() {
       <Testimonials />
       <FAQ />
       <FinalCTA />
+      <Footer />
     </main>
   );
 }

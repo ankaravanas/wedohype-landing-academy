@@ -1,6 +1,7 @@
 "use client";
 
 import { FileCheck, Lightbulb, Brain, DollarSign, Target, TrendingUp } from "lucide-react";
+import { ShinyButton } from "@/components/ui/shiny-button";
 
 const gains = [
   {
@@ -62,6 +63,11 @@ export default function WhatYouGain() {
               </p>
             </div>
           ))}
+        </div>
+
+        {/* CTA Button */}
+        <div className="text-center mt-10">
+          <ShinyButton href="#pricing">Απόκτησέ το</ShinyButton>
         </div>
       </div>
     </section>

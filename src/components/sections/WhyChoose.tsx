@@ -1,6 +1,7 @@
 "use client";
 
 import { Check } from "lucide-react";
+import { ShinyButton } from "@/components/ui/shiny-button";
 
 const benefits = [
   "Σύντομα, πρακτικά βίντεο που βλέπεις όποτε θέλεις.",
@@ -9,7 +10,7 @@ const benefits = [
   "Στο τέλος των βίντεο, θα έχεις έτοιμη τη landing page σου.",
   "Εκπαίδευση σε κορυφαία digital και AI εργαλεία.",
   "Βασισμένο σε αληθινά success stories πελατών μας.",
-  "Bonus Pack αξίας ΧΧΧ+€ που θα σου είναι χρήσιμα για πάντα.",
+  "Bonus Pack αξίας 2.770€+ που θα σου είναι χρήσιμα για πάντα.",
   "Εγγύηση επιστροφής χρημάτων.",
 ];
 
@@ -36,6 +37,11 @@ export default function WhyChoose() {
                 <p className="text-[#15301f] text-[15px] leading-[22px]">{benefit}</p>
               </div>
             ))}
+          </div>
+
+          {/* CTA Button */}
+          <div className="text-center mt-8">
+            <ShinyButton href="#pricing">Απόκτησέ το</ShinyButton>
           </div>
         </div>
       </div>
