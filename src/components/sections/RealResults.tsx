@@ -29,21 +29,33 @@ const results = [
 const caseStudies = [
   {
     src: "/images/kidnest-lp.webp",
-    name: "Kidnest",
     result: "+68% Conversion Rate",
     industry: "Parenting & Education",
   },
   {
     src: "/images/screencapture-fitbuddy-gr-experience-2024-10-09-16_49_12.webp",
-    name: "FitBuddy",
     result: "+45% Lead Generation",
-    industry: "Fitness",
+    industry: "Fitness App",
   },
   {
     src: "/images/screencapture-katiatalksdiet-gr-2024-10-09-13_50_57.webp",
-    name: "Katia Talks Diet",
     result: "2.3x Sales Increase",
-    industry: "Nutrition",
+    industry: "Nutrition Coaching",
+  },
+  {
+    src: "/images/screencapture-grillacademy-kyso-gr-homepage-2024-10-09-13_59_24.webp",
+    result: "+52% Registrations",
+    industry: "Culinary Academy",
+  },
+  {
+    src: "/images/screencapture-sneakerness-gr-2024-10-11-17_02_15.webp",
+    result: "3x Event Sign-ups",
+    industry: "Event & Fashion",
+  },
+  {
+    src: "/images/screencapture-pharmasept-gr-el-heliodor-lp-2024-10-09-13_53_01.webp",
+    result: "+89% Product Sales",
+    industry: "Skincare & Cosmetics",
   },
 ];
 
@@ -88,27 +100,28 @@ export default function RealResults() {
               key={index}
               className="group bg-white rounded-[15px] overflow-hidden border border-[#d5e9c6] shadow-[0px_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0px_8px_40px_rgba(133,198,95,0.15)] transition-all duration-300"
             >
-              {/* Image with scroll-on-hover effect */}
+              {/* Image with smooth scroll-on-hover effect */}
               <div className="relative h-[320px] overflow-hidden">
-                <Image
-                  src={study.src}
-                  alt={study.name}
-                  fill
-                  className="object-cover object-top transition-all duration-[3s] ease-in-out group-hover:object-bottom"
-                />
+                <div className="absolute inset-0 w-full h-[200%] transition-transform duration-[4s] ease-[cubic-bezier(0.25,0.1,0.25,1)] group-hover:-translate-y-[50%]">
+                  <Image
+                    src={study.src}
+                    alt={study.industry}
+                    fill
+                    className="object-cover object-top"
+                  />
+                </div>
                 {/* Gradient overlay - bottom */}
-                <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#15301f]/80 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#15301f]/80 to-transparent z-10" />
                 {/* Gradient overlay - top (subtle) */}
-                <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-[#15301f]/30 to-transparent" />
+                <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-[#15301f]/30 to-transparent z-10" />
                 {/* Result badge */}
-                <div className="absolute bottom-3 left-3 bg-[#85c65f] text-white px-3 py-1.5 rounded-full text-[13px] font-semibold">
+                <div className="absolute bottom-3 left-3 bg-[#85c65f] text-white px-3 py-1.5 rounded-full text-[13px] font-semibold z-20">
                   {study.result}
                 </div>
               </div>
               {/* Info */}
               <div className="p-4">
-                <h4 className="text-[18px] font-semibold text-[#15301f] mb-1">{study.name}</h4>
-                <p className="text-[14px] text-gray-500">{study.industry}</p>
+                <p className="text-[16px] font-semibold text-[#15301f]">{study.industry}</p>
               </div>
             </div>
           ))}
