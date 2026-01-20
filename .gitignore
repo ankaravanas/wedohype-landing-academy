@@ -15,7 +15,7 @@
 
 # next.js
 /.next/
-# /out/ - needed for GitHub Pages
+/out/
 
 # production
 /build
@@ -39,4 +39,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-out/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Claude
+.claude/

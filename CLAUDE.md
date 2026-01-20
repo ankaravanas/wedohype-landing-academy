@@ -190,14 +190,14 @@ import { motion } from "motion/react";
 
 - **GitHub Repository:** `ankaravanas/wedohype-landing-academy`
 - **GitHub Pages URL:** `https://ankaravanas.github.io/wedohype-landing-academy/`
-- **Deployment:** Automatic via GitHub Actions (`.github/workflows/deploy.yml`)
 - **Static Export:** Uses `output: "export"` with basePath for GitHub Pages
 
-### GitHub Pages Setup
+### GitHub Pages Setup (Branch-based)
 
-The project uses GitHub Actions for deployment. Make sure:
-1. Repository Settings > Pages > Source is set to **GitHub Actions**
-2. The workflow runs automatically on push to `main` branch
+1. Build locally: `npm run build`
+2. The build output goes to `/out` folder
+3. Deploy using `gh-pages` branch or manually copy to GitHub Pages
+4. Repository Settings > Pages > Source: **Deploy from a branch** > `gh-pages` / `root`
 
 ## CSS Animations
 
