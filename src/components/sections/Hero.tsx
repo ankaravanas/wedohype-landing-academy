@@ -11,10 +11,12 @@ const features = [
 ];
 
 const landingPageExamples = [
-  { src: "/images/landing-page-card-1.jpg", alt: "Landing Page Example 1" },
-  { src: "/images/landing-page-card-2.jpg", alt: "Landing Page Example 2" },
-  { src: "/images/landing-page-card-3.png", alt: "Landing Page Example 3" },
-  { src: "/images/landing-page-card-4.png", alt: "Landing Page Example 4" },
+  { src: "/images/kidnest-lp.webp", alt: "Kidnest Landing Page" },
+  { src: "/images/rania-nats.webp", alt: "Rania Nats Landing Page" },
+  { src: "/images/screencapture-fitbuddy-gr-experience-2024-10-09-16_49_12.webp", alt: "FitBuddy Landing Page" },
+  { src: "/images/screencapture-grillacademy-kyso-gr-homepage-2024-10-09-13_59_24.webp", alt: "Grill Academy Landing Page" },
+  { src: "/images/screencapture-katiatalksdiet-gr-2024-10-09-13_50_57.webp", alt: "Katia Talks Diet Landing Page" },
+  { src: "/images/screencapture-sneakerness-gr-2024-10-11-17_02_15.webp", alt: "Sneakerness Landing Page" },
 ];
 
 export default function Hero() {
